@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Nunito;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.7);
+  transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(0.25px) scale(0.75) translateX(-94%) translateY(-100%)
+    rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240, 230, 220, 0.7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+img:last-of-type {
+  transform: translateZ(0.4px) scale(0.6) translateX(-104%) translateY(-40%)
+    rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240, 230, 220, 0.7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n + 1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide,
+.slide:before {
+  background: 50% 50% / cover;
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5e8f8debe5f4bb1e8bf451c1/1586545614233-RFMENR4F9I3XFI4A0T5Z/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/Background+Only.jpg?format=2500w");
+  z-index: 2;
+}
+
+#title h1 {
+  transform: translateZ(0.25px) scale(0.75);
+  transform-origin: 50% 100%;
+}
+
+#slide1:before {
+  background-image: url("https://i.pinimg.com/originals/9b/44/73/9b4473cf62db6d62a572de0472039a47.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url("https://i.pinimg.com/originals/24/65/06/2465060aee9a621643959d46369adbef.jpg");
+  z-index: 2;
+}
+
+#slide3:before {
+  background-image: url("https://lorempixel.com/640/480/abstract/5/");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background: #222;
+}
+
+    </style>
+</head>
+<body>
+    <div id="title" class="slide header">
+  <h1>Qui a tué Fluffy?</h1>
+</div>
+
+<div id="slide1" class="slide">
+  <div class="title">
+    <h1>Tragique découverte</h1>
+    <p>L'heure est grave. Alors que vous vous réjouissiez à la soirée organisée par Fluffy, vous le trouver, mort sur son lit, avec un bodypillow de Shiba entre ses pattes. Aucune trace de sang n'est apparente, vous en déduisez donc qu'il s'agit là d'un empoisonement. Avant d'avertir les invités présent sur place, vous inspectez la scène de crime.</p>
+    <p>Sur son lit, vous découvrez des poils blanc de partout, de la même couleur que le pelage neigeux du défunt. Sur sa table basse est déposé une simple tasse contenant un thé encore chaud. Le crime est récent.</p>
+    <p>Votre regard se porte sur son bureau. Un livre y est ouvert. Cela semble être le journal de Fluffy. Jurant trouver l'assassin hodieux qui a commit cet acte, vous lisez les dernières lignes.</p>
+    <p>"Alas, I am but a fool. I have discovered upon myself an utterly terrible sin. Yes, oh my lord, forgive me. As condict your holy amendment, thee shall end thyself life upon sinning.</p>
+    <p>... si seulement vous parliez anglais.</p>
+  </div>
+</div>
+
+<div id="slide2" class="slide">
+  <div class="title">
+    <h1>Slide 2</h1>
+    <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+  </div>
+  <img src="https://cdn.discordapp.com/attachments/767673910933454850/767675268725997598/tasse.jpg">
+  <img src="https://images-na.ssl-images-amazon.com/images/I/51fDXChTVLL._AC_SX522_.jpg"> 
+</div>
+
+<div id="slide3" class="slide">
+  <div class="title">
+    <h1>Slide 3</h1>
+    <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+  </div>
+</div>
+
+<div id="slide4" class="slide header">
+    <h1>The End</h1>
+</div>
+</body>
+</html>
