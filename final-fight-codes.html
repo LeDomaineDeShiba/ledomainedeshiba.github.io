@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @font-face {
+        font-family: PressStart;
+        src: url(PressStart2P-Regular.ttf);
+}
+        body{
+            background-color: black;
+            color: white;
+            font-family: PressStart;
+        }
+        .centered {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        button {
+            font-family : inherit;
+            font-size: 1em;
+            background-color: white;
+            border: none;
+            font-size: 25px;
+            padding: 5px 15px;
+            border-radius: 2px;
+        }
+        button:hover {
+            font-family : inherit;
+            font-size: 1em;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            font-size: 25px;
+            padding: 5px 15px;
+            border-radius: 2px;
+        }
+        a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: underline;
+}
+        
+        .exp{visibility: hidden;}
+    </style>
+    <script>
+
+        // Prompt
+        function ask() {
+            var txt;
+            var person = prompt("Enter code.");
+            if (person == "498") {
+                txt = "Access allowed."
+                unhide()
+            }
+            else {
+                txt = "Wrong. Try again."
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        // CACHER PREMIERE ENIGME (après avoir trouver le premier code)
+        function unhide() {
+            var hid = document.getElementsByClassName("exp");
+            // Emulates jQuery $(element).is(':hidden');
+            if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+                hid[0].style.visibility = "visible";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="centered">
+        <button class="bouton" onclick="ask()">FIRST CODE</button>
+        <p id="demo"></p>
+        <span class="exp">
+            <img src="https://s.abcnews.com/images/Lifestyle/ht_pudding_the_fox_04_mt_140821_16x9_384.jpg">
+            <p>Seconde énigme</p>
+            <a href="final-fight-codes-498.html">Rentre la réponse sur cette page</a>
+        </span>
+    </div>
+</body>
+</html>
