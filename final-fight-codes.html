@@ -14,6 +14,7 @@
             background-color: black;
             color: white;
             font-family: PressStart;
+            font-size: 10px;
         }
         .centered {
             position: fixed;
@@ -51,24 +52,84 @@ a:hover {
 }
         
         .exp{visibility: hidden;}
+        .exp2{visibility: hidden;}
+        .exp3{visibility: hidden;}
+        .exp4{visibility: hidden;}
+        .exp5{visibility: hidden;}
     </style>
     <script>
 
-        // Prompt
+        // Prompt première énigme
         function ask() {
             var txt;
-            var person = prompt("Enter code.");
+            var person = prompt("Enter first code.");
             if (person == "498") {
                 txt = ""
                 unhide()
             }
             else {
-                txt = "Wrong. Try again."
+                txt = ""
             }
             document.getElementById("demo").innerHTML = txt;
         }
 
-        // CACHER PREMIERE ENIGME (après avoir trouver le premier code)
+        // Prompt deuxième énigme
+        function ask2() {
+            var txt;
+            var person = prompt("Enter second code.");
+            if (person == "justfluffy") {
+                txt = ""
+                unhide2()
+            }
+            else {
+                txt = ""
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        // Prompt troisième énigme
+        function ask3() {
+            var txt;
+            var person = prompt("Enter second code.");
+            if (person == "643801") {
+                txt = ""
+                unhide3()
+            }
+            else {
+                txt = ""
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        // Prompt quatrème énigme
+        function ask4() {
+            var txt;
+            var person = prompt("Enter second code.");
+            if (person == "heartbound") {
+                txt = ""
+                unhide4()
+            }
+            else {
+                txt = ""
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        // Prompt 5e énigme
+        function ask5() {
+            var txt;
+            var person = prompt("Enter second code.");
+            if (person == "chèvroup") {
+                txt = ""
+                unhide5()
+            }
+            else {
+                txt = ""
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        // REVELER PREMIERE ENIGME
         function unhide() {
             var hid = document.getElementsByClassName("exp");
             // Emulates jQuery $(element).is(':hidden');
@@ -76,18 +137,86 @@ a:hover {
                 hid[0].style.visibility = "visible";
             }
         }
+
+        // REVELER DEUXIEME ENIGME
+        function unhide2() {
+            var hid = document.getElementsByClassName("exp2");
+            // Emulates jQuery $(element).is(':hidden');
+            if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+                hid[0].style.visibility = "visible";
+            }
+        }
+
+        // REVELER TROISIEME ENIGME
+        function unhide3() {
+            var hid = document.getElementsByClassName("exp3");
+            // Emulates jQuery $(element).is(':hidden');
+            if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+                hid[0].style.visibility = "visible";
+            }
+        }
+
+        // REVELER QUATRIEME ENIGME
+        function unhide4() {
+            var hid = document.getElementsByClassName("exp4");
+            // Emulates jQuery $(element).is(':hidden');
+            if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+                hid[0].style.visibility = "visible";
+            }
+        }
+
+        // REVELER CINQUIEME ENIGME
+        function unhide5() {
+            var hid = document.getElementsByClassName("exp5");
+            // Emulates jQuery $(element).is(':hidden');
+            if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+                hid[0].style.visibility = "visible";
+            }
+        }
+
     </script>
 </head>
 <body>
     <div class="centered">
-        <button class="bouton" onclick="ask()">FIRST CODE</button>
+        <p>FINAL FIGHT INTERFACE: WELCOME.</p>
+        <p>VOICI VOTRE PREMIERE ETAPE.</p>
+        <p>SI RIEN NE SE PRODUIT LORSQUE VOUS ECRIVEZ VOTRE CODE, C'EST QU'IL EST ERRONÉ.</p>
+        <p>BONNE CHANCE. VOUS EN AUREZ BESOIN.</p>
+        <br>
+        <img src="calcul.png">
+        <br>
+        <br>    
+        <button class="bouton" onclick="ask()">ENTER FIRST CODE</button>
         <p id="demo"></p>
         <span class="exp">
-            <p>Seconde énigme<br></p>
+            <br>
+            <p>ACCESS ALLOWED. ETAPE 2.<br></p>
             <img src="unitologie.png">
             <br>
             <br>
-            <a href="final-fight-codes-498.html" target="_blank">Rentre la réponse sur cette page</a>
+            <button class="bouton" onclick="ask2()">ENTER SECOND CODE</button>
+        </span>
+        <span class="exp2">
+            <br><br>
+            <p>ACCES ALLOWED. ETAPE 3.</p>
+            <p>qué es サイズ 法國 in chiliometrorum?</p>
+            <button class="bouton" onclick="ask3()">ENTER THIRD CODE</button>
+        </span>
+        <span class="exp3">
+            <br><br>
+            <p>ACCES ALLOWED. ETAPE 4.</p>
+            <p>Quel est le nom du jeu sorti en 2018 au air d'Undertale metant en scène un garçon et son chien?</p>
+            <button class="bouton" onclick="ask4()">ENTER FOURTH CODE</button>
+        </span>
+        <span class="exp4">
+            <br><br>
+            <p>ACCES ALLOWED. ETAPE FINALE.</p>
+            <p>Quel est le mot préféré de Fluffy?</p>
+            <button class="bouton" onclick="ask5()">ENTER LAST CODE</button>
+        </span>
+        <span class="exp5">
+            <br><br>
+            <p>Si tu as trouver cette réponse, c'est que tu as tricher et que tu as été voir dans le code source et t'es vraiment pas fun. Oui, car cette partie est volontairement impossible.</p>
         </span>
     </div>
 </body>
