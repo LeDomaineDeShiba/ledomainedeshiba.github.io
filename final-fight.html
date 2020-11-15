@@ -197,6 +197,7 @@ button:hover {
 
 var counter = 0;
 
+// LE PROBLEME QUE CLIQUER AUTRE PART QUE LE BOUTON ACTIVE LE TIMER EST ICI. 
 window.onclick = function () {
     if (counter < 1 )
         var fiveMinutes = 60 * 8.32,
@@ -261,7 +262,9 @@ function timedRedirect() {
 
       <img id="centered" src="">
       <h3 style='clear:both' class="subhead">
-        <button onclick="unhide();play();timedRedirect();"><span id="time">08:20</span></button>
+        <form action="final-fight-codes.html" method="get" target="_blank">
+          <button type="submit" onclick="unhide();play();timedRedirect();"><span id="time">08:20</span></button>
+      </form>
         <br>
         <span class="exp">
           <h4>Trouve X</h4>
