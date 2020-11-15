@@ -150,7 +150,6 @@ body { font-size: 1em;}
     margin-right: auto;
     width: 50%;
 }
-.exp{visibility: hidden;}
 
 button {
     font-family : inherit;
@@ -208,16 +207,6 @@ window.onclick = function () {
 };
 
 
-//CACHER LES TEXTES AVANT DE CLICKER
-function unhide() {
-    var hid = document.getElementsByClassName("exp");
-    // Emulates jQuery $(element).is(':hidden');
-    if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
-        hid[0].style.visibility = "visible";
-    }
-}  
-
-
 //JOUER LA MUSIQUE QUAND ON CLIC
 window.isplaying = false;
 
@@ -263,20 +252,9 @@ function timedRedirect() {
       <img id="centered" src="">
       <h3 style='clear:both' class="subhead">
         <form action="final-fight-codes.html" method="get" target="_blank">
-          <button type="submit" onclick="unhide();play();timedRedirect();"><span id="time">08:20</span></button>
+          <button type="submit" onclick="play();timedRedirect();"><span id="time">08:20</span></button>
       </form>
-        <br>
-        <span class="exp">
-          <h4>Trouve X</h4>
-          <img src="calcul.png">
-          <br>
-          <br>
-          <a target="_blank" href="final-fight-codes.html">Rentre la réponse sur cette page</a>
-        </span>
       </h3>
-      <p id='pleft'>
-      </p>
-      <p id='pright'>
       </p>
   </div>
 </div>
